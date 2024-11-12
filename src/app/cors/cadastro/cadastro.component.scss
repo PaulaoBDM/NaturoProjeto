@@ -1,0 +1,107 @@
+.background {
+    background-image: url('../../../assets/images/background_naruto.png');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cadastro-container {
+    background: linear-gradient(45deg, #ff9900, #ff6600);
+    padding: 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 700px;
+    position: relative;
+}
+
+.cadastro-title {
+    font-size: 2rem;
+    color: #EFCB6A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.cadastro-form .form-group {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.cadastro-form label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-right: 10px;
+    width: 150px; 
+    padding: 20px;
+}
+
+.cadastro-form input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; 
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end;    
+    margin-top: 30px;
+    margin-left: 500px;
+    
+}
+.button-cadastrar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-cadastrar {
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: #03F;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.button-voltar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.button-voltar {
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: #FFF600;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.register-text {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 15px;
+}
