@@ -1,0 +1,37 @@
+<div class="background">
+    <div class="titulo">
+      <h2>
+        <img src="/konoha.png" alt=""/>
+        Consulta CEP
+      </h2>
+    </div>
+    <div class="voltar">
+      <img src="/kunai_voltar.png" alt="voltar" (click)="voltarPagina()"> 
+  </div>
+  
+    
+    <div class="princ-container">
+      <form class="princ-form">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" placeholder="00000-000" appCepFormat [readonly]="true" [(ngModel)]="cepData.dsCep"/>
+    
+        <label for="logradouro">LOGRAD:</label>
+        <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro" [readonly]="true" [(ngModel)]="cepData.dsLogradouro"/>
+    
+        <label for="bairro">BAIRRO:</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Bairro" [readonly]="true" [(ngModel)]="cepData.dsBairro"/>
+    
+        <label for="estado">ESTADO:</label>
+        <input type="text" id="estado" name="estado" placeholder="Estado" [readonly]="true" [(ngModel)]="cepData.dsEstado"/>
+    
+        <label for="ddd">DDD:</label>
+        <input type="text" id="ddd" name="ddd" placeholder="DDD" [readonly]="true" [(ngModel)]="cepData.nrDdd"/>
+        
+        <label for="map">MAP:</label>
+        <div id="map" class="map-container">
+         
+        </div> 
+      </form>
+    </div>
+  </div>
+  

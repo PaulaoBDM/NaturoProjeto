@@ -1,0 +1,107 @@
+.background {
+  background-image: url("../../../../assets/images/background_princ.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.titulo h2 {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.voltar {
+  position: absolute;
+  top: 40px;
+  left: 130px;
+  text-align: left;
+}
+
+.voltar img {
+  margin-top: 5px;
+  width: 110px;
+  height: auto;
+  cursor: pointer;
+}
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  -webkit-text-stroke-width: 3;
+  -webkit-text-stroke-color: #000;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(91deg, #ff8949 -41.63%, #efcb6a 93.1%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titulo img {
+  margin-right: 10px;
+}
+
+.princ-container {
+  background: linear-gradient(45deg, #ff9900, #ff6600);
+  padding: 50px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 700px;
+  position: relative;
+  border: 3px solid #fff600;
+  background: #ff9156;
+  box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
+  width: 510.601px;
+  height: 798.312px;
+  flex-shrink: 0;
+  margin-left: 50px;
+  flex: 0;
+  margin-right: 20px;
+}
+.princ-form {
+  margin-top: 20px;
+}
+
+.princ-form label {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+.princ-form input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.alterar {
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 38px;
+  cursor: pointer;
+  border: 1px solid #000;
+  background: rgba(255, 246, 0, 0.25);
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
+}
+button.alterar:hover {
+  background-color: #0056b3;
+  transition: ease-in 0.2s;
+}

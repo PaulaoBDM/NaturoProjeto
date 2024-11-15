@@ -52,6 +52,8 @@
   height: 798.312px;
   flex-shrink: 0;
   margin-left: -1000px;
+  flex: 0;
+  margin-right: 20px;
 }
 .princ-form {
   margin-top: 20px;
@@ -109,9 +111,9 @@
   cursor: pointer;
 }
 .imgs {
-    width: 25px;  
-    height: 25px;
-  margin-left: 18px; 
+  width: 25px;
+  height: 25px;
+  margin-left: 18px;
 }
 
 .historico {
@@ -154,23 +156,86 @@
   cursor: pointer;
 }
 
-
 .sair {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 20px 0px;
-    margin-top: 28px;
-    margin-right: 20px;
-    border: 1px solid #000;
-    background: rgba(255, 0, 0, 0.25); 
-    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
-    position: absolute; 
-    top: 20px;
-    right: 20px; 
-    display: flex;
-    align-items: center;
-    padding: 10px 15px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 20px 0px;
+  margin-top: 28px;
+  margin-right: 20px;
+  border: 1px solid #000;
+  background: rgba(255, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background-color: #ff9156;
+  padding: 40px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  button {
+    margin-top: 10px;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 20px;
   }
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+.ceps-list {
+  position: fixed;
+  top: 120px;
+  right: 200px;
+  width: 500px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #ff9156;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.ceps-list h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.ceps-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ceps-lista li {
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+}

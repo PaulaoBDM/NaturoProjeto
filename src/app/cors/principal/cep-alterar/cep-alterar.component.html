@@ -1,0 +1,66 @@
+<div class="background">
+  <div class="titulo">
+    <h2>
+      <img src="/konoha.png" alt="" />
+      Editar CEP
+    </h2>
+  </div>
+
+  <div class="voltar">
+    <img src="/kunai_voltar.png" alt="voltar" (click)="voltarPagina()" />
+  </div>
+
+  <div class="princ-container">
+    <form class="princ-form" (ngSubmit)="editarCep()">
+      <label for="cep">CEP:</label>
+      <input
+        type="text"
+        id="cep"
+        name="cep"
+        appCepFormat
+        [readonly]="true"
+        [(ngModel)]="cepData.dsCep"
+        required
+      />
+
+      <label for="logradouro">LOGRAD:</label>
+      <input
+        type="text"
+        id="logradouro"
+        name="logradouro"
+        [(ngModel)]="cepData.dsLogradouro"
+        required
+      />
+
+      <label for="bairro">BAIRRO:</label>
+      <input
+        type="text"
+        id="bairro"
+        name="bairro"
+        [(ngModel)]="cepData.dsBairro"
+        required
+      />
+
+      <label for="estado">ESTADO:</label>
+      <input
+        type="text"
+        id="estado"
+        name="estado"
+        [(ngModel)]="cepData.dsEstado"
+        required
+      />
+
+      <label for="ddd">DDD:</label>
+      <input
+        type="text"
+        id="ddd"
+        name="ddd"
+        [(ngModel)]="cepData.nrDdd"
+        pattern="\d{2}"
+        title="O DDD deve ser composto por exatamente 2 números."
+        required
+      />
+      <button type="submit" class="alterar">Alterar</button>
+    </form>
+  </div>
+</div>

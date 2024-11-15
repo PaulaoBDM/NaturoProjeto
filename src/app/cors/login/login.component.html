@@ -1,21 +1,41 @@
 <div class="background">
-    <div class="login-container">
-        <h1 class="login-title">
-            <img src="/konoha.png" alt="" class="logo-icon"> LOGIN
-        </h1>
-        <form class="login-form">
-            <label for="username">LOGIN:</label>
-            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" appCpfFormat />
+  <div class="login-container">
+    <h1 class="login-title">
+      <img src="/konoha.png" alt="" class="logo-icon" /> LOGIN
+    </h1>
+    <form class="login-form">
+      <label for="username">LOGIN:</label>
+      <input
+        type="text"
+        id="dsCpf"
+        name="cpf"
+        placeholder="000.000.000-00"
+        [(ngModel)]="dsCpf"
+        appCpfFormat
+      />
 
-            <label for="password">SENHA:</label>
-            <input type="password" id="password" name="password" placeholder="Senha">
+      <label for="password">SENHA:</label>
+      <input
+        type="password"
+        id="dsSenha"
+        name="password"
+        placeholder="Senha"
+        [(ngModel)]="dsSenha"
+      />
 
-            <div class="buttons-container">
-                <button type="button" class="button-cadastrar" (click)="irParaCadastro()">CADASTRE-SE</button>
-                <button type="submit" class="button-login"(click)="irParaPrincipal()" >LOGIN</button>
-                
-            </div>
-            <p class="register-text">NÃO TEM CONTA AINDA?</p>
-        </form>
-    </div>
+      <div class="buttons-container">
+        <button
+          type="button"
+          class="button-cadastrar"
+          (click)="irParaCadastro()"
+        >
+          CADASTRE-SE
+        </button>
+        <button type="submit" class="button-login" (click)="irParaPrincipal()">
+          LOGIN
+        </button>
+      </div>
+      <p class="register-text">NÃO TEM CONTA AINDA?</p>
+    </form>
+  </div>
 </div>

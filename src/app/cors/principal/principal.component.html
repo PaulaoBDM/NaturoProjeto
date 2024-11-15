@@ -1,38 +1,135 @@
 <div class="background">
-    <div class="titulo">
-        <h2>
-            <img src="/konoha.png" alt="">
-            Registra-cep do naruto
-        </h2>
+  <div class="titulo">
+    <h2>
+      <img src="/konoha.png" alt="" />
+      Registra-cep do naruto
+    </h2>
+  </div>
+
+  <div class="princ-container">
+    <form class="princ-form">
+      <label for="cep">CEP:</label>
+      <input
+        type="text"
+        id="cep"
+        name="cep"
+        placeholder="00000-000"
+        appCepFormat
+        [(ngModel)]="dsCep"
+        (ngModelChange)="buscarCep()"
+      />
+
+      <label for="logradouro">LOGRAD:</label>
+      <input
+        type="text"
+        id="logradouro"
+        name="logradouro"
+        placeholder="Logradouro"
+        [value]="dsLogradouro"
+        readonly
+      />
+
+      <label for="bairro">BAIRRO:</label>
+      <input
+        type="text"
+        id="bairro"
+        name="bairro"
+        placeholder="Bairro"
+        [value]="dsBairro"
+        readonly
+      />
+
+      <label for="estado">ESTADO:</label>
+      <input
+        type="text"
+        id="estado"
+        name="estado"
+        placeholder="Estado"
+        [value]="dsEstado"
+        readonly
+      />
+
+      <label for="ddd">DDD:</label>
+      <input
+        type="text"
+        id="ddd"
+        name="ddd"
+        placeholder="DDD"
+        [value]="nrDdd"
+        readonly
+      />
+
+      <label for="map">MAP:</label>
+      <div id="map" class="map-container"></div>
+    </form>
+  </div>
+  <div class="ceps-list">
+    <h3>CEPs Cadastrados</h3>
+    <ul>
+      <li *ngFor="let cep of cepsCadastrados">
+        {{ cep.dsCep }} - {{ cep.dsLogradouro }} - {{ cep.dsEstado }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="Botoes">
+    <button class="editar" (click)="abrirModal('editar')">
+      Editar<img class="imgs" src="/lapizin.png" alt="" />
+    </button>
+    <button class="historico" (click)="abrirModal('consultar')">
+      Consultar<img class="imgs" src="/papelzin.png" alt="" />
+    </button>
+    <button class="excluir" (click)="abrirModal('excluir')">
+      Excluir <img class="imgs" src="/simbolo.png" alt="" />
+    </button>
+    <button class="cadastrar" (click)="cadastrarCep()">
+      Cadastrar<img class="imgs" src="/simbolo2.png" alt="" />
+    </button>
+  </div>
+
+  <button class="sair" (click)="logout()">
+    Sair<img class="imgs" src="/bolinha_sair.png" alt="" />
+  </button>
+
+  <div *ngIf="mostrarModal && tipoModal === 'excluir'" class="modal">
+    <div class="modal-conteudo">
+      <h3>Digite o CEP para confirmar a exclusão</h3>
+      <input
+        type="text"
+        appCepFormat
+        [(ngModel)]="cepParaExcluir"
+        placeholder="Digite o CEP"
+      />
+      <button (click)="excluirCep()" class="excluir">Excluir</button>
+      <button (click)="fecharModal()" class="excluir">Cancelar</button>
     </div>
-    
-    <div class="princ-container">
-        <form class="princ-form">
-            <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" placeholder="00000-000" appCepFormat />
+  </div>
 
-            <label for="logradouro">LOGRAD:</label>
-            <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro" readonly />
-
-            <label for="bairro">BAIRRO:</label>
-            <input type="text" id="bairro" name="bairro" placeholder="Bairro" readonly />
-
-            <label for="estado">ESTADO:</label>
-            <input type="text" id="estado" name="estado" placeholder="Estado" readonly />
-
-            <label for="ddd">DDD:</label>
-            <input type="text" id="ddd" name="ddd" placeholder="DDD" readonly />
-
-            <label for="map">MAP:</label>
-            <div id="map" class="map-container"></div> 
-        </form>
+  <div *ngIf="mostrarModal && tipoModal === 'consultar'" class="modal">
+    <div class="modal-conteudo">
+      <h3>Digite o CEP para consultar</h3>
+      <input
+        type="text"
+        appCepFormat
+        [(ngModel)]="cepParaConsultar"
+        placeholder="Digite o CEP"
+      />
+      <button (click)="consultarCep()" class="historico">Consultar</button>
+      <button (click)="fecharModal()" class="historico">Cancelar</button>
     </div>
-    <div class="Botoes">
-        <button class="editar">Editar<img  class="imgs"  src="/lapizin.png" alt=""></button>
-        <button class="historico">Historico<img  class="imgs"  src="/papelzin.png" alt=""></button>
-        <button class="excluir">Excluir <img  class="imgs"  src="/simbolo.png" alt=""></button>
-        <button class="cadastrar">Cadastrar<img  class="imgs"  src="/simbolo2.png" alt=""></button>
+  </div>
+
+  <div *ngIf="mostrarModal && tipoModal === 'editar'" class="modal">
+    <div class="modal-conteudo">
+      <h3>Digite o CEP para editar</h3>
+      <input
+        type="text"
+        appCepFormat
+        [(ngModel)]="cepParaEditar"
+        placeholder="Digite o CEP"
+      />
+      <button (click)="editarCep()" class="editar">Editar</button>
+      <button (click)="fecharModal()" class="editar">Cancelar</button>
     </div>
-    <button class="sair">Sair<img class="imgs" src="/bolinha_sair.png" alt=""></button> 
+  </div>
 </div>
-

@@ -1,88 +1,85 @@
-
 .background {
-    background-image: url('../../../assets/images/background_naruto.png');
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  background-image: url("../../../assets/images/background_naruto.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-
 .login-container {
-    background: linear-gradient(45deg, #ff9900, #ff6600);
-    padding: 50px 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 700px;
-    position: relative;
+  background: linear-gradient(45deg, #ff9900, #ff6600);
+  padding: 50px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 700px;
+  position: relative;
 }
 
 .login-title {
-    font-size: 2rem;
-    color: #ffcc00;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 10px;
+  font-size: 2rem;
+  color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
 }
 
 .login-form {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .login-form label {
-    font-size: 1.2rem;
-    color: #333;
-    display: block;
-    margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #333;
+  display: block;
+  margin: 10px 0 5px;
 }
 
 .login-form input {
-    width: 100%;
-    padding: 8px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-    
 .buttons-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
 
 .button-cadastrar,
 .button-login {
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .button-cadastrar {
-    border-radius: 30px;
-    border: 1px solid #FFF;
-    background: #FFF600;
-    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: 1px solid #fff;
+  background: #fff600;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
 }
 .button-login {
-    border-radius: 30px;
-    border: 1px solid #000;
-    background: #03F;
-    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: 1px solid #000;
+  background: #03f;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
 }
 
 .register-text {
-    font-size: 0.9rem;
-    color: #333;
-    margin-top: 15px;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 15px;
 }
